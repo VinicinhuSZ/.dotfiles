@@ -1,6 +1,6 @@
-.PHONY: i3status
-i3status:
-	stow --no-folding -t ~ i3status
+.PHONY: i3
+i3:
+	stow --no-folding -t ~ i3
 
 .PHONY: zsh
 zsh:
