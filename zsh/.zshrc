@@ -1,6 +1,7 @@
 if [ -r "$HOME/.zaliases" ]; then
 	source "$HOME/.zaliases" 
 fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -66,17 +67,29 @@ ZSH_THEME="robbyrussell"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM="$HOME/.config/zsh/oh-my-zsh/custom"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+# Plugins
+if [ ! -d "${ZSH_CUSTOM}/plugins/zsh-syntax-highlighting" ]; then
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM}/plugins/zsh-syntax-highlighting"
+fi
+
+source "${ZSH_CUSTOM}/plugins/zsh-syntax-highlighting"
+
+if [ ! -d "${ZSH_CUSTOM}/plugins/zsh-autosuggestions" ]; then
+  git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM}/plugins/zsh-autosuggestions"
+fi
+
+source "${ZSH_CUSTOM}/plugins/zsh-autosuggestions"
+
 plugins=(
-  git
   zsh-syntax-highlighting
-#  zsh-autosuggestions
+  zsh-autosuggestions  
 )
 
 source $ZSH/oh-my-zsh.sh
