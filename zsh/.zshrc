@@ -120,3 +120,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+  mkdir "$ZSH_CACHE_DIR"
+fi
+
+source "$ZSH/oh-my-zsh.sh"
+
+# nvm
+[ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
+source "/usr/share/nvm/nvm.sh"
+source "/usr/share/nvm/install-nvm-exec"

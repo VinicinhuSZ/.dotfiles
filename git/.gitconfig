@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	email = vinicavagna@gmail.com
+	name = Vinicius Prado
+[push]
+	followTags = true
