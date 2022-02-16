@@ -3,7 +3,7 @@ docker-compose
 htop
 nodejs
 npm
-nvm
+asdf-vm
 oh-my-zsh-git
 rsync
 shellcheck

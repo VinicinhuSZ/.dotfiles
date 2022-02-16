@@ -5,3 +5,5 @@
 	name = Vinicius Prado
 [push]
 	followTags = true
+[core]
+	editor = nano
