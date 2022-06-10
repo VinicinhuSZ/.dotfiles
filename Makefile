@@ -1,9 +1,5 @@
 .PHONY: install
-install: aur vim zsh git
-
-.PHONY: i3
-i3:
-	stow --no-folding -t ~ i3
+install: packages zsh git cfg-docker
 
 .PHONY: packages
 packages:
