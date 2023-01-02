@@ -1,5 +1,5 @@
 if [ -r "$HOME/.zaliases" ]; then
-	source "$HOME/.zaliases" 
+	source "$HOME/.zaliases"
 fi
 
 # If you come from bash you might have to change your $PATH.
@@ -89,7 +89,7 @@ source "${ZSH_CUSTOM}/plugins/zsh-autosuggestions"
 
 plugins=(
   zsh-syntax-highlighting
-  zsh-autosuggestions  
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -129,3 +129,6 @@ source "$ZSH/oh-my-zsh.sh"
 
 # asdf
 source /opt/asdf-vm/asdf.sh
+
+# rust - cargo
+source "$HOME/.cargo/env"
