@@ -129,6 +129,3 @@ source "$ZSH/oh-my-zsh.sh"
 
 # asdf
 source /opt/asdf-vm/asdf.sh
-
-# rust - cargo
-source "$HOME/.cargo/env"
